@@ -1,16 +1,47 @@
-# React + Vite
+# THE FACE AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![The Face Men Thailand cast](docs/the-face-men-thailand.png)
 
-Currently, two official plugins are available:
+An AI casting-room app inspired by **The Face** — hit the camera, get mentor-style pose challenges, snap under pressure, then get scored like you’re standing in front of the panel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
 
-## React Compiler
+1. **Start the shoot** — press Camera and your webcam goes live  
+2. **Get the brief** — three random modeling directions (serious, sexy, casual, powerful, etc.)  
+3. **Countdown** — `5…4…3…2…1` then auto-capture  
+4. **Mentor review** — OpenAI Vision grades each pose against its instruction  
+5. **See the book** — each photo shows with a score and punchy feedback  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Beach Labubus still hang out on the runway for chaos energy. You can spawn more (clears at 20).
 
-## Expanding the Oxlint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React + Vite  
+- Webcam capture in the browser  
+- OpenAI Vision (`gpt-4o-mini`) for pose evaluation  
+
+## Setup
+
+```bash
+npm install
+```
+
+Create a `.env` file (see `.env.example`):
+
+```
+VITE_OPENAI_API_KEY=your_key_here
+```
+
+Then run:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173).
+
+> Keep your API key in `.env` only — it is gitignored and should never be committed.
+
+## Project vibe
+
+Black studio. Teal accents. Big **THE FACE** branding. Casting-room energy — not a generic webcam demo.
